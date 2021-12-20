@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+	<h1>{{ object.titulo}}</h1>
+	    
+    <main class="container">
+         <div class="bg-ligth p-5 rounded mt-3">
+             <h1>{{object.fecha_creacion }}</h1>
+             <p class="lead">{{object.contenido}} </p>
+             <a class="btn btn-lg btn-primary" href="{% url 'listar'%}" role="button">Volver a la lista</a>
+
+         </div>
+    </main>
+{% endblock %}	

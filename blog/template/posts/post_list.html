@@ -1,6 +1,33 @@
 {% extends 'index.html' %}
 
 {% block content %}
-    <h1 class="text-primary">Post_list del view posts</h1> 
+   <!--  <h1 class="text-primary">Post_list del view posts</h1>  -->
+   <div class="row">
 
+     {% if posts %}
+         {% for post in posts %}
+            <div class="col-md-6">
+                  <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                     <div class="col p-4 d-flex flex-column position-static">
+                       <strong class="d-inline-block mb-2 text-primary">Models de post</strong>
+                       <h3 class="mb-0">{{ post.titulo}}</h3>
+                        <div class="mb-1 text-muted">{{ post.fecha_creacion}}</div>
+                         <p class="card-text mb-auto">{{ post.contenido}}</p>
+                         <div class="row">
+                          <a href="{% url 'detalle' post.id %}" class="col stretched-link">Ver mas</a>                                                                  
+                         </div>
+                      </div> 
+                    </div>
+                </div>
+          {% endfor %}
+   </div>
+      {% else %}
+        <div class="alert alert-danger" role="alert">
+          No hay noticias 
+        </div>
+        
+     {% endif %}       
+        
+
+</div>
 {% endblock %}
