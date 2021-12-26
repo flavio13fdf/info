@@ -11,6 +11,7 @@ class ListarPosts(ListView):
 	""" def get_queryset(self):
 		noticias = Noticia.objects.all().order_by('-fecha_creacion')
 		return noticias """
+		
 class DetallePosts(DetailView):
 	model=Post
 	template_name="posts/post_detail.html"		

@@ -1,0 +1,16 @@
+{% extends '../index.html' %}
+{% load static i18n %}
+
+{% block content %}
+<div class="login-form">
+    <div class="jumbotron">
+        <h1 class="text-center"> Ingresar </h1>
+        <form method="POST" id="form-login">
+            {% csrf_token %}
+            <input placeholder="usuario" name="username" id="username" type="text">
+            <input placeholder="pass" name="password" id="password" type="password">
+            <input type="submit" class="btn btn-block btn-primary" value="Entrar">
+        </form>
+    </div>
+</div>
+{% endblock %}
