@@ -1,0 +1,42 @@
+{% extends 'index.html' %}
+
+{% block content %}
+	    <body class="text-center">
+
+        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+          <header class="masthead mb-auto">
+            <div class="inner">
+              <h1 class="masthead-brand">Bienvenidos al Informatorio Blog</h1>
+              <nav class="nav nav-masthead justify-content-center">
+                <a class="btn btn-sm btn-outline-secondary" href="{% url 'login' %}">Login Prueba</a>
+                <a class="btn btn-sm btn-outline-secondary" href="{% url 'accounts_register' %}">Registro Prueba</a>
+                <a class="nav-link" href="#">Contact</a>
+              </nav>
+            </div>
+          </header>
+    
+          <main role="main" class="inner cover">
+            <h1 class="cover-heading">17 objetivos para transformar nuestro mundo</h1>
+            <p class="lead">En este sitio mostramos la información sobre cuáles son esos objetivos y los esfuerzos que la ONU y sus socios están llevando a cabo para construir un mundo mejor.</p>
+            <p class="lead">
+            </p>
+          </main>
+    
+          <footer class="mastfoot mt-auto">
+            <div class="inner">
+              <p>Pagina hecha por <a href="https://getbootstrap.com/">Comision 5</a>, y <a href="https://twitter.com/mdo">grupo3 @mdo</a>.</p>
+            </div>
+          </footer>
+        </div>
+            
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+        <script src="../../assets/js/vendor/popper.min.js"></script>
+        <script src="../../dist/js/bootstrap.min.js"></script>
+      
+    
+    </body>
+{% endblock %}	

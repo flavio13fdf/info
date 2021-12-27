@@ -1,10 +1,13 @@
 from django.contrib import admin
-from .models import Post
+from apps.posts.models import Post, Comentario
 # Register your models here.
 
-class PostAdmin(admin.ModelAdmin):
-	list_display = ('titulo', 'contenido', 'fecha_creacion')
-	list_filter = ('titulo','contenido')
+""" class PostAdmin(admin.ModelAdmin):
+	list_display = ('titulo', 'contenido', )
+	list_filter = ('titulo','contenido') """
 # Register your models here.
-admin.site.register(Post,PostAdmin)
+# admin.site.register(Post,PostAdmin)
+
+admin.site.register(Post)
+admin.site.register(Comentario)
 
